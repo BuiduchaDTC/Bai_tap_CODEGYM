@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng ký người dùng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .register-form {
+            background-color: #ffffff;
+            width: 400px;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .register-form h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        .register-form label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .register-form input[type="text"],
+        .register-form input[type="email"],
+        .register-form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .register-form input[type="text"]:focus,
+        .register-form input[type="email"]:focus,
+        .register-form input[type="tel"]:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        .radio-group {
+            margin-top: 5px;
+        }
+
+        .radio-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 20px;
+            margin-top: 0;
+        }
+
+        .register-form button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .register-form button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="register-form" action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+        <h2>Đăng ký người dùng</h2>
+
+        <!-- Họ và tên -->
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required />
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Nhập email" required />
+
+        <!-- Số điện thoại -->
+        <label for="phone">Số điện thoại:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required />
+
+        <!-- Giới tính -->
+        <label>Giới tính:</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="gender" value="nam" checked /> Nam
+            </label>
+            <label>
+                <input type="radio" name="gender" value="nu" /> Nữ
+            </label>
+            <label>
+                <input type="radio" name="gender" value="khac" /> Khác
+            </label>
+        </div>
+
+        <!-- Nút gửi -->
+        <button type="submit">Đăng ký</button>
+    </form>
+</body>
+
+</html>
