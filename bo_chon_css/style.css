@@ -1,0 +1,28 @@
+/* Đổi màu nền của trang */
+body {
+    background-color: #f0f8ff;
+}
+
+/* Căn giữa tiêu đề h1 */
+h1 {
+    text-align: center;
+}
+
+/* Định dạng danh sách với màu sắc khác nhau */
+ul li:nth-child(1) {
+    color: #e74c3c;
+}
+
+ul li:nth-child(2) {
+    color: #27ae60;
+}
+
+ul li:nth-child(3) {
+    color: #2980b9;
+}
+
+/* Hover effect cho nút bấm */
+button:hover {
+    background-color: #3498db;
+    color: white;
+}
