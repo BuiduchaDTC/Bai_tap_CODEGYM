@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+</head>
+
+<body>
+    <!-- Tiêu đề chính -->
+    <h1>Lịch họp công ty</h1>
+
+    <!-- Bảng lịch họp -->
+    <table border="1" cellpadding="10" cellspacing="0">
+        <!-- Hàng tiêu đề -->
+        <tr>
+            <th>Ngày</th>
+            <th>Giờ</th>
+            <th>Nội dung cuộc họp</th>
+        </tr>
+
+        <!-- Thứ Hai: có 3 cuộc họp → rowspan="3" cho cột Ngày -->
+        <tr>
+            <td rowspan="3">Thứ Hai<br>06/10/2025</td>
+            <td>08:00 - 09:00</td>
+            <td>Họp giao ban đầu tuần</td>
+        </tr>
+        <tr>
+            <td>09:30 - 11:00</td>
+            <td>Họp phòng Marketing</td>
+        </tr>
+        <tr>
+            <td>14:00 - 15:00</td>
+            <td>Họp với khách hàng A</td>
+        </tr>
+
+        <!-- Thứ Ba: cuộc họp kéo dài 2 giờ → colspan="2" cho Giờ + Nội dung -->
+        <tr>
+            <td rowspan="2">Thứ Ba<br>07/10/2025</td>
+            <td>08:00 - 10:00</td>
+            <td>Họp chiến lược quý IV</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                Nghỉ giải lao &amp; chuẩn bị tài liệu
+            </td>
+        </tr>
+
+        <!-- Thứ Tư: 2 cuộc họp → rowspan="2" cho cột Ngày -->
+        <tr>
+            <td rowspan="2">Thứ Tư<br>08/10/2025</td>
+            <td>09:00 - 10:30</td>
+            <td>Họp nhóm phát triển sản phẩm</td>
+        </tr>
+        <tr>
+            <td>15:00 - 16:30</td>
+            <td>Đào tạo nhân viên mới</td>
+        </tr>
+
+        <!-- Thứ Năm: cuộc họp toàn công ty → colspan="3" -->
+        <tr>
+            <td>Thứ Năm<br>09/10/2025</td>
+            <td colspan="2" style="text-align: center;">
+                <strong>Họp toàn công ty (08:00 - 11:00)</strong>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
