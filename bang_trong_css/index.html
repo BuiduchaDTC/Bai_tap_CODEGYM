@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Định kiểu bảng trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            padding: 20px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 15px 25px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* ============================================
+               1. Đường viền cơ bản (có thể bị kép)
+               ============================================ */
+        .basic-border table,
+        .basic-border th,
+        .basic-border td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        /* ============================================
+               2. border-collapse: collapse (gộp viền)
+               ============================================ */
+        .collapse-border table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .collapse-border table,
+        .collapse-border th,
+        .collapse-border td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        /* ============================================
+               3. Width & Height
+               ============================================ */
+        .size-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .size-table th,
+        .size-table td {
+            border: 1px solid #333;
+            padding: 8px;
+        }
+
+        .size-table th {
+            height: 50px;
+            background-color: #ecf0f1;
+        }
+
+        /* ============================================
+               4. Căn chỉnh ngang (text-align)
+               ============================================ */
+        .align-horizontal table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .align-horizontal th,
+        .align-horizontal td {
+            border: 1px solid #333;
+            padding: 8px;
+        }
+
+        .align-horizontal th {
+            text-align: left;
+            /* Căn trái tiêu đề */
+            background-color: #ecf0f1;
+        }
+
+        /* ============================================
+               5. Căn chỉnh dọc (vertical-align)
+               ============================================ */
+        .align-vertical table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .align-vertical th,
+        .align-vertical td {
+            border: 1px solid #333;
+            padding: 8px;
+        }
+
+        .align-vertical td {
+            height: 80px;
+            vertical-align: bottom;
+            /* Căn xuống dưới */
+        }
+
+        /* ============================================
+               6. Padding trong ô
+               ============================================ */
+        .padding-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .padding-table th,
+        .padding-table td {
+            border: 1px solid #333;
+            padding: 15px;
+            /* Khoảng cách nội dung và viền */
+        }
+
+        /* ============================================
+               7. Màu sắc trong bảng
+               ============================================ */
+        .colored-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .colored-table table,
+        .colored-table th,
+        .colored-table td {
+            border: 1px solid black;
+        }
+
+        .colored-table th {
+            background-color: #333;
+            color: white;
+            padding: 12px;
+        }
+
+        .colored-table td {
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 10px;
+        }
+
+        /* ============================================
+               8. Bảng tổng hợp: zebra striping + hover
+               ============================================ */
+        .final-table table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        .final-table th,
+        .final-table td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .final-table th {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            height: 50px;
+        }
+
+        /* Sọc ngựa vằn */
+        .final-table tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+
+        .final-table tr:nth-child(odd) td {
+            background-color: #ffffff;
+        }
+
+        /* Hiệu ứng hover */
+        .final-table tr:hover td {
+            background-color: #ffeaa7;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        /* Căn dọc */
+        .final-table td {
+            vertical-align: middle;
+        }
+
+        /* Căn trái cột đầu tiên */
+        .final-table td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Định kiểu bảng trong CSS</h1>
+
+    <!-- 1. Đường viền cơ bản -->
+    <section class="basic-border">
+        <h2>1. Đường viền cơ bản</h2>
+        <table>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- 2. border-collapse: collapse -->
+    <section class="collapse-border">
+        <h2>2. Gộp đường viền (border-collapse: collapse)</h2>
+        <table>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- 3. Width & Height -->
+    <section class="size-table">
+        <h2>3. Chiều rộng &amp; chiều cao</h2>
+        <table>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- 4. Căn chỉnh ngang -->
+    <section class="align-horizontal">
+        <h2>4. Căn chỉnh ngang (text-align: left)</h2>
+        <table>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- 5. Căn chỉnh dọc -->
+    <section class="align-vertical">
+        <h2>5. Căn chỉnh dọc (vertical-align: bottom)</h2>
+        <table>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- 6. Padding -->
+    <section class="padding-table">
+        <h2>6. Padding trong ô (padding: 15px)</h2>
+        <table>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- 7. Màu sắc -->
+    <section class="colored-table">
+        <h2>7. Màu sắc trong bảng</h2>
+        <table>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- 8. Bảng tổng hợp đẹp mắt -->
+    <section class="final-table">
+        <h2>8. Bảng tổng hợp: kẻ sọc + hover + màu sắc</h2>
+        <table>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Lê Văn C</td>
+                <td>22</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Phạm Thị D</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+
+</html>
