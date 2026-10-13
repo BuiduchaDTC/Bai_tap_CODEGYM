@@ -1,0 +1,151 @@
+/* ============================================
+   Reset & layout chung
+   ============================================ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #2980b9;
+    margin-top: 30px;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+}
+
+h3 {
+    color: #555;
+    margin-top: 15px;
+}
+
+section {
+    background-color: #fff;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================
+   2. list-style-type: square
+   ============================================ */
+.square-list {
+    list-style-type: square;
+    color: #16a085;
+}
+
+/* ============================================
+   3. list-style-type: upper-roman
+   ============================================ */
+.roman-list {
+    list-style-type: upper-roman;
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+/* ============================================
+   4. list-style-image
+   ============================================ */
+.image-list {
+    /* Dùng ảnh làm dấu đánh dấu */
+    list-style-image: url("https://cdn-icons-png.flaticon.com/24/1828/1828919.png");
+    padding-left: 30px;
+    color: #2c3e50;
+}
+
+.image-list li {
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+/* ============================================
+   5. list-style-position
+   ============================================ */
+.position-outside {
+    list-style-position: outside;
+    background-color: #eaf7ff;
+    padding: 10px 10px 10px 30px;
+    border-left: 3px solid #3498db;
+}
+
+.position-inside {
+    list-style-position: inside;
+    background-color: #fff4e6;
+    padding: 10px;
+    border-left: 3px solid #e67e22;
+}
+
+/* ============================================
+   6. Thuộc tính rút gọn list-style
+   ============================================ */
+.shorthand-list {
+    /* type | position | image */
+    list-style: square inside url("https://cdn-icons-png.flaticon.com/24/1828/1828919.png");
+    background-color: #f0fff4;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #27ae60;
+    font-weight: 500;
+}
+
+/* ============================================
+   7. Danh sách với màu sắc + khoảng cách
+   ============================================ */
+.colored-list {
+    list-style-type: circle;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 20px 20px 40px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.colored-list li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-bottom: 1px dashed #7f8c8d;
+}
+
+.colored-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   8. Lộ trình học – bài tổng hợp
+   ============================================ */
+.roadmap-list {
+    /* Rút gọn: type | position */
+    list-style: upper-roman inside;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(253, 160, 133, 0.4);
+}
+
+.roadmap-list li {
+    margin-bottom: 12px;
+    padding: 8px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.roadmap-list li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
