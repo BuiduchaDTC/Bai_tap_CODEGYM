@@ -1,0 +1,21 @@
+/* Thiết lập màu nền cho trang web */
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Thêm ảnh nền vào khối div + căn giữa nội dung */
+.important-box {
+    background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+}
