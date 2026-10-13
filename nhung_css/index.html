@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ba cách nhúng CSS</title>
+
+    <!-- ============================================
+         PHẦN 2: INTERNAL STYLE
+         Dùng thẻ <style> trong <head>
+         ============================================ -->
+    <style>
+        .internal-style {
+            color: #e74c3c;
+            /* Màu đỏ */
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- ============================================
+         PHẦN 3: EXTERNAL STYLE
+         Liên kết file style.css bên ngoài
+         ============================================ -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Ba cách nhúng CSS vào HTML</h1>
+
+    <!-- ============================================
+         PHẦN 1: INLINE STYLE
+         Dùng thuộc tính style trực tiếp trên thẻ
+         ============================================ -->
+    <section>
+        <h2>Phần 1: Inline Style</h2>
+        <p style="color: #3498db; font-size: 18px; font-weight: bold;">
+            Đoạn văn này được định màu bằng <strong>inline-style</strong> —
+            màu xanh dương được viết trực tiếp trong thuộc tính
+            <code>style</code> của thẻ &lt;p&gt;.
+        </p>
+    </section>
+
+    <!-- ============================================
+         PHẦN 2: INTERNAL STYLE
+         Dùng class .internal-style đã khai báo trong <style>
+         ============================================ -->
+    <section>
+        <h2>Phần 2: Internal Style</h2>
+        <p class="internal-style">
+            Đoạn văn này được định màu bằng <strong>internal-style</strong> —
+            màu đỏ được khai báo trong thẻ &lt;style&gt; nằm trong phần
+            &lt;head&gt; của tài liệu.
+        </p>
+    </section>
+
+    <!-- ============================================
+         PHẦN 3: EXTERNAL STYLE
+         Dùng class .external-style được khai báo trong style.css
+         ============================================ -->
+    <section>
+        <h2>Phần 3: External Style</h2>
+        <p class="external-style">
+            Đoạn văn này được định màu bằng <strong>external-style</strong> —
+            màu xanh lá được khai báo trong file <code>style.css</code>
+            bên ngoài và liên kết vào HTML bằng thẻ &lt;link&gt;.
+        </p>
+    </section>
+
+</body>
+
+</html>
