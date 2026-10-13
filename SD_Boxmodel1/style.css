@@ -1,0 +1,55 @@
+/* ============================================
+   Định dạng chung cho trang
+   ============================================ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* ============================================
+   Định dạng chung cho tất cả .card
+   ============================================ */
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #3498db;
+    margin: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Thẻ 1: content-box (mặc định) — nền xanh lá
+   ============================================ */
+.card:nth-child(1) {
+    box-sizing: content-box;
+    background-color: #2ecc71;
+}
+
+/* ============================================
+   Thẻ 2: border-box — nền vàng
+   ============================================ */
+.card:nth-child(2) {
+    box-sizing: border-box;
+    background-color: #f1c40f;
+}
+
+/* ============================================
+   Thẻ 3: border-box — nền đỏ
+   ============================================ */
+.card:nth-child(3) {
+    box-sizing: border-box;
+    background-color: #e74c3c;
+}
