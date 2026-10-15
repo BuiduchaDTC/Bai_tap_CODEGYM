@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidsFlix - Thế Giới Hoạt Hình</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header cố định -->
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-icon">▶</span> KidsFlix
+        </div>
+
+        <!-- Khung tìm kiếm -->
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm phim hoạt hình...">
+            <button>Tìm</button>
+        </div>
+
+        <!-- Head-link (Menu điều hướng) -->
+        <nav class="head-link">
+            <ul>
+                <li><a href="#" class="active">Trang chủ</a></li>
+                <li><a href="#">Mới cập nhật</a></li>
+                <li><a href="#">Xem nhiều nhất</a></li>
+                <li><a href="#">Thể loại</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Khu vực nội dung chính -->
+    <main class="container">
+        <!-- Left Content: Danh sách video -->
+        <aside class="left-content">
+            <div class="menu-title">
+                <h3>Danh sách phát</h3>
+            </div>
+            <div class="video-list">
+                <!-- Item 1 -->
+                <div class="video-item active">
+                    <img src="https://img.youtube.com/vi/1bFzaTFgGk8/maxresdefault.jpg" alt="Tom & Jerry"
+                        class="thumbnail">
+                    <div class="video-info">
+                        <h4>Tom & Jerry - Tập đặc biệt</h4>
+                        <p>1.2M lượt xem • Thuyết minh Tiếng Việt</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="video-item">
+                    <img src="https://img.youtube.com/vi/OqJDvuAwa3Q/maxresdefault.jpg" alt="Doraemon"
+                        class="thumbnail">
+                    <div class="video-info">
+                        <h4>Doraemon - Chuyến phiêu lưu</h4>
+                        <p>850K lượt xem • Thuyết minh Tiếng Việt</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="video-item">
+                    <img src="https://img.youtube.com/vi/lJDWY1QOikQ/maxresdefault.jpg" alt="Peppa Pig"
+                        class="thumbnail">
+                    <div class="video-info">
+                        <h4>Heo Peppa - Mùa hè sôi động</h4>
+                        <p>3.4M lượt xem • Lồng tiếng Tiếng Việt</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="video-item">
+                    <img src="https://img.youtube.com/vi/kPqH9d0T9tA/maxresdefault.jpg" alt="Conan" class="thumbnail">
+                    <div class="video-info">
+                        <h4>Thám tử lừng danh Conan</h4>
+                        <p>2.1M lượt xem • Thuyết minh Tiếng Việt</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Content: Khu vực xem video -->
+        <section class="right-content">
+            <div class="player-wrapper">
+                <!-- Sử dụng iframe để nhúng video YouTube (Chất lượng HD/FullHD) -->
+                <iframe src="https://www.youtube.com/embed/1bFzaTFgGk8?autoplay=1&rel=0" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+                <!-- Gợi ý sử dụng thẻ <video> trực tiếp nếu có source gốc (đã comment lại) -->
+                <!--
+                <video controls autoplay>
+                    <source src="video/tom_and_jerry_1080p.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+                -->
+            </div>
+
+            <div class="video-details">
+                <h1 class="video-title">Tom & Jerry - Tập đặc biệt (Full HD) | Thuyết minh Tiếng Việt</h1>
+                <div class="video-meta">
+                    <span>👁 1,200,540 lượt xem</span>
+                    <span>🕒 Cập nhật: Hôm nay</span>
+                    <span class="badge">FullHD 1080p</span>
+                    <span class="badge safe">✓ An toàn cho bé</span>
+                </div>
+                <div class="video-description">
+                    <p>Phim hoạt hình Tom & Jerry chọn lọc, chất lượng FullHD sắc nét, thuyết minh tiếng Việt chuẩn. Nội
+                        dung đã được kiểm duyệt, không chứa quảng cáo độc hại, đảm bảo môi trường giải trí an toàn tuyệt
+                        đối cho trẻ em.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 KidsFlix. Nền tảng xem phim hoạt hình an toàn, chọn lọc và không quảng cáo dành cho trẻ em.</p>
+    </footer>
+</body>
+
+</html>
