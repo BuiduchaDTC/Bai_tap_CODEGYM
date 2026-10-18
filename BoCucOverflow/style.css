@@ -1,0 +1,70 @@
+/* ============================================
+   1. RESET & BODY
+   ============================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  background-color: #f4f6f8;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* ============================================
+   2. KHỐI CHỨA 2 CỘT (FLOAT)
+   ============================================ */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  /* Kỹ thuật clearfix để bao trọn 2 cột float */
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.left-column {
+  width: 50%;
+  float: left;
+  background-color: lightgray;
+  padding: 20px;
+  min-height: 200px;
+  border-right: 1px solid #ccc;
+}
+
+.right-column {
+  width: 50%;
+  float: right;
+  background-color: lightgreen;
+  padding: 20px;
+  min-height: 200px;
+}
+
+/* ============================================
+   3. KHỐI NỘI DUNG BỊ TRÀN (OVERFLOW)
+   ============================================ */
+.overflow-box {
+  width: 300px;
+  height: 100px;
+  background-color: lightcoral;
+  padding: 10px;
+  overflow: auto; /* Tự động hiện thanh cuộn khi cần */
+
+  /* Căn giữa khối */
+  margin: 0 auto;
+  border-radius: 6px;
+  border: 1px solid #e57373;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
