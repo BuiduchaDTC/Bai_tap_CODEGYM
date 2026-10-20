@@ -1,0 +1,162 @@
+/* ==========================================
+   1. RESET & CƠ BẢN
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container giới hạn chiều rộng trang web và căn giữa */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   2. HEADER
+   ========================================== */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between; /* Logo bên trái, nút bên phải */
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.btn-header {
+  text-decoration: none;
+  background-color: #0056b3;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-header:hover {
+  background-color: #004494;
+}
+
+/* ==========================================
+   3. NAVIGATION MENU
+   ========================================== */
+.site-nav {
+  background-color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Căn giữa các mục menu */
+}
+
+.nav-links li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 25px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #555;
+}
+
+/* ==========================================
+   4. CONTENT SECTION
+   ========================================== */
+.content-area {
+  padding: 50px 0;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.page-desc {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Dùng Grid để chia 2 cột (Văn bản - Hình ảnh) */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 cột bằng nhau */
+  gap: 40px;
+  align-items: center;
+}
+
+.content-text h2 {
+  margin-bottom: 15px;
+  color: #0056b3;
+}
+
+.content-text p {
+  margin-bottom: 15px;
+}
+
+.content-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   5. FOOTER
+   ========================================== */
+.site-footer {
+  background-color: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* ==========================================
+   6. RESPONSIVE (MOBILE)
+   ========================================== */
+@media (max-width: 768px) {
+  /* Menu chuyển thành dọc */
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+  }
+
+  /* Content chuyển thành 1 cột */
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+}
