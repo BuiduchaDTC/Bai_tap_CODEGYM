@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS flex-flow</title>
+    <style>
+      /* Reset CSS cơ bản */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f8fafc;
+        color: #333;
+      }
+
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+
+      p.desc {
+        margin-bottom: 15px;
+        color: #555;
+        font-size: 0.95rem;
+        font-style: italic;
+      }
+
+      /* ==========================================
+           VÍ DỤ 1: row nowrap
+           ========================================== */
+      .container-1 {
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: #f1f1f1;
+        border: 1px dashed #ccc;
+        padding: 10px;
+        margin-bottom: 30px;
+      }
+
+      .container-1 > div {
+        background-color: #007bff;
+        color: white;
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+
+      /* ==========================================
+           VÍ DỤ 2: row-reverse nowrap
+           ========================================== */
+      .container-2 {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        background-color: #f1f1f1;
+        border: 1px dashed #ccc;
+        padding: 10px;
+        margin-bottom: 30px;
+      }
+
+      .container-2 > div {
+        background-color: #28a745;
+        color: white;
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Thực hành CSS flex-flow</h1>
+
+    <!-- VÍ DỤ 1 -->
+    <h2>1. flex-flow: row nowrap;</h2>
+    <p class="desc">Các item xếp từ trái sang phải (1 -> 2 -> 3).</p>
+    <div class="container-1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <!-- VÍ DỤ 2 -->
+    <h2>2. flex-flow: row-reverse nowrap;</h2>
+    <p class="desc">Các item xếp từ phải sang trái (3 -> 2 -> 1).</p>
+    <div class="container-2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>
