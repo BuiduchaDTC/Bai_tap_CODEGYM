@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS flex-wrap</title>
+    <style>
+      /* Reset CSS cơ bản */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f6f8;
+        color: #333;
+      }
+
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: #2c3e50;
+        font-size: 1.2rem;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+
+      p.desc {
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        color: #666;
+        font-style: italic;
+      }
+
+      /* ==========================================
+           STYLE CHUNG CHO CONTAINER VÀ ITEM
+           ========================================== */
+      .container {
+        display: flex;
+        width: 600px;
+        height: 300px;
+        gap: 10px;
+        border: 2px solid #333;
+        background-color: #fff;
+        margin-bottom: 20px;
+        /* Cho phép cuộn ngang nếu nowrap bị tràn */
+        overflow-x: auto;
+      }
+
+      .item {
+        width: 180px;
+        height: 80px;
+        padding: 20px;
+        background-color: lightblue;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #3498db;
+        border-radius: 4px;
+        /* Chống co rút để thấy rõ hiệu ứng tràn của nowrap */
+        flex-shrink: 0;
+      }
+
+      /* ==========================================
+           CÁC TRƯỜNG HỢP FLEX-WRAP
+           ========================================== */
+
+      /* 1. nowrap (Mặc định) */
+      .ex-nowrap {
+        flex-wrap: nowrap;
+      }
+      .ex-nowrap .item {
+        background-color: lightgreen;
+      }
+
+      /* 2. wrap */
+      .ex-wrap {
+        flex-wrap: wrap;
+        /* Căn đều các item lên trên cùng */
+        align-content: flex-start;
+      }
+      .ex-wrap .item {
+        background-color: lightblue;
+      }
+
+      /* 3. wrap-reverse */
+      .ex-wrap-reverse {
+        flex-wrap: wrap-reverse;
+        /* Căn đều các item xuống dưới cùng vì đã đảo trục */
+        align-content: flex-end;
+      }
+      .ex-wrap-reverse .item {
+        background-color: lightcoral;
+      }
+
+      /* 4. initial (Tương đương nowrap) */
+      .ex-initial {
+        flex-wrap: initial;
+      }
+      .ex-initial .item {
+        background-color: lightyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Thực hành CSS flex-wrap</h1>
+
+    <!-- 1. NOWRAP -->
+    <h2>1. flex-wrap: nowrap; (Mặc định)</h2>
+    <p class="desc">
+      Các Item không xuống dòng. Do không đủ chỗ, các item bị tràn ra ngoài (có
+      thanh cuộn ngang).
+    </p>
+    <div class="container ex-nowrap">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+    </div>
+
+    <!-- 2. WRAP -->
+    <h2>2. flex-wrap: wrap;</h2>
+    <p class="desc">
+      Các Item tự động rớt xuống dòng mới khi hàng trên không đủ chỗ chứa.
+    </p>
+    <div class="container ex-wrap">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+    </div>
+
+    <!-- 3. WRAP-REVERSE -->
+    <h2>3. flex-wrap: wrap-reverse;</h2>
+    <p class="desc">
+      Giống như wrap, nhưng các dòng bị đảo ngược từ dưới lên trên.
+    </p>
+    <div class="container ex-wrap-reverse">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+    </div>
+
+    <!-- 4. INITIAL -->
+    <h2>4. flex-wrap: initial;</h2>
+    <p class="desc">Đưa thuộc tính về mặc định (tương đương nowrap).</p>
+    <div class="container ex-initial">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+    </div>
+  </body>
+</html>

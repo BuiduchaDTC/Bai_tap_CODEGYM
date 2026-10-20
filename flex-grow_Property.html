@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS flex-grow</title>
+    <style>
+      /* Reset CSS cơ bản */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f6f8;
+        color: #333;
+      }
+
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+
+      p.desc {
+        margin-bottom: 15px;
+        color: #555;
+        font-size: 0.95rem;
+      }
+
+      /* Khung hiển thị chung */
+      .wrapper {
+        background-color: #e2e8f0;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+
+      .container {
+        display: flex;
+        width: 100%; /* Chiếm toàn bộ chiều rộng khung wrapper */
+        gap: 10px;
+      }
+
+      /* Style chung cho các item */
+      .item {
+        padding: 20px 10px;
+        text-align: center;
+        font-weight: bold;
+        background-color: lightblue;
+        border: 1px solid #3498db;
+        border-radius: 4px;
+        /* Không set width cố định để flex-grow tự do phát huy tác dụng */
+      }
+
+      /* ==========================================
+           VÍ DỤ 1: Mặc định (Không có flex-grow)
+           ========================================== */
+      /* Các item tự động co lại vừa đủ nội dung */
+
+      /* ==========================================
+           VÍ DỤ 2: Chỉ div thứ 2 dùng flex-grow
+           ========================================== */
+      .ex2 .item-2 {
+        flex-grow: 1;
+        background-color: #f1c40f; /* Màu vàng để dễ nhận biết */
+        border-color: #f39c12;
+      }
+
+      /* ==========================================
+           VÍ DỤ 3: Chia tỷ lệ flex-grow cho tất cả
+           ========================================== */
+      .ex3 .item-1 {
+        flex-grow: 1;
+      }
+      .ex3 .item-2 {
+        flex-grow: 2;
+        background-color: #e74c3c;
+        color: white;
+        border-color: #c0392b;
+      }
+      .ex3 .item-3 {
+        flex-grow: 1;
+      }
+      .ex3 .item-4 {
+        flex-grow: 1;
+      }
+      .ex3 .item-5 {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Thực hành CSS flex-grow</h1>
+
+    <!-- VÍ DỤ 1 -->
+    <h2>1. Mặc định (Không có flex-grow)</h2>
+    <p class="desc">
+      Các item chỉ rộng bằng đúng phần nội dung của nó, không chiếm thêm không
+      gian trống.
+    </p>
+    <div class="wrapper">
+      <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+    </div>
+
+    <!-- VÍ DỤ 2 -->
+    <h2>2. Áp dụng flex-grow: 1; cho div thứ 2</h2>
+    <p class="desc">
+      Div số 2 được cấp quyền "hút" toàn bộ khoảng trống còn dư, nên nó giãn ra
+      rất dài. Các div khác vẫn giữ nguyên.
+    </p>
+    <div class="wrapper ex2">
+      <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2 (flex-grow: 1)</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+      </div>
+    </div>
+
+    <!-- VÍ DỤ 3 -->
+    <h2>3. Chia tỷ lệ flex-grow (1 : 2 : 1 : 1 : 1)</h2>
+    <p class="desc">
+      Không gian trống được chia theo tỷ lệ. Div số 2 (flex-grow: 2) sẽ to gấp
+      đôi các div còn lại.
+    </p>
+    <div class="wrapper ex3">
+      <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2 (grow: 2)</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+      </div>
+    </div>
+  </body>
+</html>

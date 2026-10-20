@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Landing Page</title>
+
+    <!-- Nhúng CSS Bootstrap từ CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Custom CSS để làm đẹp thêm -->
+    <style>
+      /* Hero Section: Thêm Gradient cho đẹp hơn màu xanh đơn điệu */
+      .hero-section {
+        background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+        padding: 6rem 0;
+      }
+
+      /* Card Dịch vụ: Hiệu ứng nổi lên khi hover */
+      .service-card {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        height: 100%;
+      }
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- BƯỚC 2.2: NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">MyBrand.</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- ms-auto đẩy menu sang góc phải -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BƯỚC 2.3: HERO SECTION -->
+    <header class="hero-section text-white text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Chào mừng đến với MyBrand</h1>
+        <p class="lead mb-4">
+          Giải pháp số 1 giúp doanh nghiệp của bạn bứt phá trong kỷ nguyên số.
+        </p>
+        <a
+          href="#services"
+          class="btn btn-light btn-lg px-4 py-2 fw-bold text-primary"
+          >Khám phá ngay</a
+        >
+      </div>
+    </header>
+
+    <!-- BƯỚC 2.4: GRID SYSTEM - SERVICES -->
+    <section id="services" class="container py-5">
+      <h2 class="text-center fw-bold mb-5">Dịch vụ của chúng tôi</h2>
+
+      <div class="row g-4">
+        <!-- g-4 tạo khoảng cách (gap) giữa các cột -->
+
+        <!-- Cột 1 -->
+        <div class="col-md-4">
+          <div class="card service-card text-center p-4">
+            <div class="card-body">
+              <h3 class="card-title h5 text-primary fw-bold">Thiết kế Web</h3>
+              <p class="card-text text-muted">
+                Dịch vụ thiết kế web chuyên nghiệp, giao diện hiện đại, chuẩn
+                UI/UX.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột 2 -->
+        <div class="col-md-4">
+          <div class="card service-card text-center p-4">
+            <div class="card-body">
+              <h3 class="card-title h5 text-primary fw-bold">
+                SEO & Marketing
+              </h3>
+              <p class="card-text text-muted">
+                Nâng cao thương hiệu của bạn, tiếp cận hàng triệu khách hàng
+                tiềm năng.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="col-md-4">
+          <div class="card service-card text-center p-4">
+            <div class="card-body">
+              <h3 class="card-title h5 text-primary fw-bold">Hỗ trợ 24/7</h3>
+              <p class="card-text text-muted">
+                Đội ngũ kỹ thuật luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 2.5: FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 MyBrand. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Nhúng JS Bootstrap từ CDN (Bắt buộc để nút Hamburger hoạt động) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

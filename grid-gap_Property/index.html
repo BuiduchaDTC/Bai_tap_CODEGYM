@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS grid-gap</title>
+    <style>
+      /* Reset CSS cơ bản */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f8fafc;
+        color: #333;
+      }
+
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+
+      p.desc {
+        margin-bottom: 15px;
+        color: #555;
+        font-size: 0.95rem;
+      }
+
+      .wrapper {
+        background-color: #e2e8f0;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      /* Style chung cho các ô */
+      .grid-container div {
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 6px;
+        font-size: 1.1rem;
+      }
+
+      /* ==========================================
+           VÍ DỤ 1: Khoảng cách đều
+           ========================================== */
+      .ex1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px; /* Cả hàng và cột đều 20px */
+      }
+
+      .ex1 div {
+        background-color: lightblue;
+        border: 1px solid #3498db;
+      }
+
+      /* ==========================================
+           VÍ DỤ 2: Khoảng cách hàng và cột khác nhau
+           ========================================== */
+      .ex2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px 10px; /* Hàng 30px, Cột 10px */
+      }
+
+      .ex2 div {
+        background-color: lightgreen;
+        border: 1px solid #27ae60;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- VÍ DỤ 1 -->
+    <h2>1. Ví dụ: grid-gap: 20px;</h2>
+    <p class="desc">
+      Khoảng cách giữa các hàng và các cột đều bằng <strong>20px</strong>.
+    </p>
+    <div class="wrapper">
+      <div class="grid-container ex1">
+        <div>Ô 1</div>
+        <div>Ô 2</div>
+        <div>Ô 3</div>
+        <div>Ô 4</div>
+      </div>
+    </div>
+
+    <!-- VÍ DỤ 2 -->
+    <h2>2. Ví dụ: grid-gap: 30px 10px;</h2>
+    <p class="desc">
+      Khoảng cách giữa các <strong>hàng là 30px</strong> (thoáng hơn) và giữa
+      các <strong>cột là 10px</strong> (hẹp hơn).
+    </p>
+    <div class="wrapper">
+      <div class="grid-container ex2">
+        <div>Ô 1</div>
+        <div>Ô 2</div>
+        <div>Ô 3</div>
+        <div>Ô 4</div>
+        <div>Ô 5</div>
+        <div>Ô 6</div>
+      </div>
+    </div>
+  </body>
+</html>

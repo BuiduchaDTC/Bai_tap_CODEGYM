@@ -1,0 +1,87 @@
+/* ============================================
+   1. ĐỊNH DẠNG CHUNG (BODY)
+   ============================================ */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* ============================================
+   2. THANH ĐIỀU HƯỚNG (NAV)
+   ============================================ */
+nav {
+  background-color: #34495e;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+nav a:hover {
+  color: #f1c40f;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+/* ============================================
+   3. KHỐI NỘI DUNG (SECTION) & 3 CỘT
+   ============================================ */
+section {
+  margin-top: 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Xóa khoảng trắng giữa các thẻ inline-block */
+  font-size: 0;
+}
+
+.box {
+  display: inline-block;
+  width: 30%; /* 3 cột: mỗi cột 30% */
+  padding: 40px 20px;
+  background-color: lightblue;
+  margin: 10px 1%; /* Khoảng cách giữa các cột */
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  vertical-align: top; /* Căn đều đỉnh các cột */
+  box-sizing: border-box; /* Đảm bảo width tính cả padding + border */
+  transition: background-color 0.2s;
+}
+
+.box:hover {
+  background-color: #85c1e9;
+}
+
+/* ============================================
+   4. CHÂN TRANG (FOOTER)
+   ============================================ */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border-radius: 5px;
+}

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới Thiệu Sản Phẩm - iPhone 15 Pro</title>
+
+    <!-- Nhúng CSS Bootstrap 5 và Font Awesome -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Custom CSS siêu nhỏ (chỉ để chỉnh màu nền) -->
+    <style>
+      body {
+        background-color: #fbfbfd;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+      }
+      .text-gradient {
+        background: -webkit-linear-gradient(45deg, #0d6efd, #d63384);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR TỐI GIẢN -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+      <div class="container justify-content-center">
+        <a class="navbar-brand fw-bold fs-4" href="#"
+          ><i class="fab fa-apple me-2"></i>Store</a
+        >
+      </div>
+    </nav>
+
+    <!-- HERO SECTION: BANNER SẢN PHẨM -->
+    <!-- Dùng d-flex, flex-column, justify-content-center, align-items-center để căn giữa hoàn hảo -->
+    <section class="container py-5 my-md-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 text-center text-lg-start">
+          <h6 class="text-primary fw-bold text-uppercase mb-2">Sản phẩm mới</h6>
+          <h1 class="display-3 fw-bold mb-3">iPhone 15 Pro</h1>
+          <p class="lead text-muted mb-4 fs-4">
+            Titan. Cực bền. Cực nhẹ. Cực Pro.
+          </p>
+          <p class="text-muted mb-5">
+            Trải nghiệm sức mạnh của chip A17 Pro với hiệu năng đồ họa đỉnh cao,
+            hệ thống camera chuyên nghiệp và thiết kế titan bền bỉ nhất từ trước
+            đến nay.
+          </p>
+
+          <div
+            class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start"
+          >
+            <button class="btn btn-primary btn-lg rounded-pill px-4 fw-bold">
+              Mua Ngay
+            </button>
+            <button
+              class="btn btn-outline-dark btn-lg rounded-pill px-4 fw-bold"
+            >
+              Tìm Hiểu Thêm
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <!-- Hình ảnh sản phẩm (dùng img-fluid để responsive) -->
+          <img
+            src="https://images.unsplash.com/photo-1696429175928-793a1c1a1149?w=800&q=80"
+            alt="iPhone 15 Pro"
+            class="img-fluid rounded-4 shadow-lg"
+            style="max-height: 500px; object-fit: cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- TÍNH NĂNG NỔI BẬT (DÙNG ICON FONT AWESOME + FLEXBOX) -->
+    <section class="bg-white py-5 border-top border-bottom">
+      <div class="container py-4">
+        <h2 class="text-center fw-bold mb-5">Tính năng đỉnh cao</h2>
+
+        <div class="row g-4 text-center">
+          <!-- Tính năng 1 -->
+          <div class="col-md-4">
+            <div class="d-flex flex-column align-items-center p-4">
+              <div
+                class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex justify-content-center align-items-center mb-3"
+                style="width: 70px; height: 70px"
+              >
+                <i class="fas fa-microchip fs-2"></i>
+              </div>
+              <h4 class="fw-bold fs-5">Chip A17 Pro</h4>
+              <p class="text-muted">
+                Hiệu năng vượt trội, tiết kiệm pin tối đa cho mọi tác vụ.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tính năng 2 -->
+          <div class="col-md-4">
+            <div class="d-flex flex-column align-items-center p-4">
+              <div
+                class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex justify-content-center align-items-center mb-3"
+                style="width: 70px; height: 70px"
+              >
+                <i class="fas fa-camera fs-2"></i>
+              </div>
+              <h4 class="fw-bold fs-5">Camera 48MP</h4>
+              <p class="text-muted">
+                Chụp ảnh sắc nét đến từng chi tiết, quay video chuẩn điện ảnh.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tính năng 3 -->
+          <div class="col-md-4">
+            <div class="d-flex flex-column align-items-center p-4">
+              <div
+                class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex justify-content-center align-items-center mb-3"
+                style="width: 70px; height: 70px"
+              >
+                <i class="fas fa-shield-halved fs-2"></i>
+              </div>
+              <h4 class="fw-bold fs-5">Khung viền Titan</h4>
+              <p class="text-muted">
+                Nhẹ hơn, bền hơn và mang lại cảm giác cầm cực kỳ sang trọng.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THÔNG SỐ KỸ THUẬT CHI TIẾT (GRID) -->
+    <section class="container py-5 my-4">
+      <h2 class="text-center fw-bold mb-5">Thông số kỹ thuật</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <!-- Dùng list-group của Bootstrap cho đẹp -->
+          <ul class="list-group list-group-flush border rounded-3 shadow-sm">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center py-3"
+            >
+              <span class="text-muted fw-medium"
+                ><i class="fas fa-mobile-screen me-2"></i> Màn hình</span
+              >
+              <span class="fw-bold text-end">6.1 inch Super Retina XDR</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center py-3"
+            >
+              <span class="text-muted fw-medium"
+                ><i class="fas fa-memory me-2"></i> Bộ nhớ</span
+              >
+              <span class="fw-bold text-end">128GB / 256GB / 512GB</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center py-3"
+            >
+              <span class="text-muted fw-medium"
+                ><i class="fas fa-battery-full me-2"></i> Pin</span
+              >
+              <span class="fw-bold text-end">Sạc nhanh 20W, sạc không dây</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center py-3"
+            >
+              <span class="text-muted fw-medium"
+                ><i class="fas fa-weight-hanging me-2"></i> Trọng lượng</span
+              >
+              <span class="fw-bold text-end">187g</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-light py-4 text-center border-top mt-5">
+      <div class="container">
+        <p class="text-muted mb-0">
+          &copy; 2025 Apple Store Demo. Thiết kế bởi Bùi Đức Hà.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Nhúng JS Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout với HTML5 và CSS</title>
+    <style>
+      /* ============================================
+           1. RESET & BODY
+           ============================================ */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Tahoma, sans-serif;
+        background-color: #eef1f5;
+        padding: 20px;
+        color: #333;
+      }
+
+      /* ============================================
+           2. KHUNG CHÍNH (DÙNG <main>)
+           ============================================ */
+      main {
+        width: 1000px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+
+      /* ============================================
+           3. HEADER
+           ============================================ */
+      header {
+        height: 120px;
+        background-color: #34495e;
+        color: #ffffff;
+        border: 2px solid #2c3e50;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      /* ============================================
+           4. NAV (MENU)
+           ============================================ */
+      nav {
+        height: 40px;
+        background-color: #3498db;
+        border: 1px solid #2980b9;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+      }
+
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        margin-right: 25px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      nav a:hover {
+        color: #f1c40f;
+        text-decoration: underline;
+      }
+
+      /* ============================================
+           5. KHU VỰC 3 CỘT: SECTION + ASIDE
+           ============================================ */
+      .content-wrapper {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      /* Cột trái (danh mục) */
+      aside.sidebar-left {
+        width: 200px;
+        min-height: 400px;
+        background-color: #ecf0f1;
+        border: 1px solid #bdc3c7;
+        padding: 15px;
+      }
+
+      aside.sidebar-left h3 {
+        color: #2c3e50;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+
+      aside.sidebar-left ul {
+        list-style: none;
+      }
+
+      aside.sidebar-left ul li {
+        padding: 8px 0;
+        border-bottom: 1px dashed #ccc;
+      }
+
+      aside.sidebar-left ul li a {
+        color: #2980b9;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      aside.sidebar-left ul li a:hover {
+        color: #e74c3c;
+      }
+
+      /* Cột giữa (nội dung chính) */
+      section.main-content {
+        flex: 1;
+        min-height: 400px;
+        background-color: #ffffff;
+        border: 1px solid #bdc3c7;
+        padding: 15px;
+      }
+
+      section.main-content h2 {
+        color: #c0392b;
+        font-size: 20px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #e74c3c;
+        padding-bottom: 8px;
+      }
+
+      /* Các bài viết con */
+      article {
+        background-color: #fef9e7;
+        border: 1px solid #f1c40f;
+        padding: 12px;
+        margin-bottom: 12px;
+        border-radius: 4px;
+      }
+
+      article h4 {
+        color: #b9770e;
+        font-size: 15px;
+        margin-bottom: 8px;
+      }
+
+      article p {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      /* Cột phải (sidebar phụ) */
+      aside.sidebar-right {
+        width: 220px;
+        min-height: 400px;
+        background-color: #eafaf1;
+        border: 1px solid #a9dfbf;
+        padding: 15px;
+      }
+
+      aside.sidebar-right h3 {
+        color: #1e8449;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #27ae60;
+        padding-bottom: 5px;
+      }
+
+      .right-box {
+        background-color: #ffffff;
+        border: 1px solid #a9dfbf;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-size: 13px;
+        color: #555;
+      }
+
+      /* ============================================
+           6. FOOTER
+           ============================================ */
+      footer {
+        height: 60px;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        border: 1px solid #1a252f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+      }
+
+      footer a {
+        color: #f1c40f;
+        text-decoration: none;
+        margin: 0 8px;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- HEADER -->
+      <header>OPEN SOURCE RECORDS</header>
+
+      <!-- NAV -->
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Students</a>
+        <a href="#">Course</a>
+        <a href="#">Bands</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <!-- 3 CỘT: ASIDE + SECTION + ASIDE -->
+      <div class="content-wrapper">
+        <!-- Cột trái -->
+        <aside class="sidebar-left">
+          <h3>Danh mục</h3>
+          <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Sự kiện</a></li>
+            <li><a href="#">Thành viên</a></li>
+            <li><a href="#">Album</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </aside>
+
+        <!-- Cột giữa: nội dung chính -->
+        <section class="main-content">
+          <h2>Hot News</h2>
+
+          <article>
+            <h4>Photo Slide</h4>
+            <p>Khu vực hiển thị slide ảnh nổi bật của trang web.</p>
+          </article>
+
+          <article>
+            <h4>News 1</h4>
+            <p>
+              Nội dung tin tức thứ nhất. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Phasellus ultricies nunc in mauris pharetra.
+            </p>
+          </article>
+
+          <article>
+            <h4>News 2</h4>
+            <p>
+              Nội dung tin tức thứ hai. Integer nec odio. Praesent libero. Sed
+              cursus ante dapibus diam.
+            </p>
+          </article>
+
+          <article>
+            <h4>News 3</h4>
+            <p>
+              Nội dung tin tức thứ ba. Nulla quis sem at nibh elementum
+              imperdiet.
+            </p>
+          </article>
+        </section>
+
+        <!-- Cột phải -->
+        <aside class="sidebar-right">
+          <h3>Sidebar</h3>
+          <div class="right-box">
+            <strong>📅 Lịch</strong><br />
+            Tháng 10/2025
+          </div>
+          <div class="right-box">
+            <strong>📊 Biểu đồ</strong><br />
+            Thống kê truy cập
+          </div>
+          <div class="right-box">
+            <strong>🗺️ Bản đồ</strong><br />
+            Vị trí văn phòng
+          </div>
+        </aside>
+      </div>
+
+      <!-- FOOTER -->
+      <footer>
+        © 2025 Open Source Records |
+        <a href="#">Privacy</a> | <a href="#">Terms</a> |
+        <a href="#">Contact</a>
+      </footer>
+    </main>
+  </body>
+</html>
