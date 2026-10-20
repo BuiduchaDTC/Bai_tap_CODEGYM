@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Refactor SASS</title>
+    <!-- Link tới file CSS được sinh ra từ SASS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-wrapper">
+            <div class="logo">TechBrand.</div>
+            <ul class="nav-links">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#products">Sản phẩm</a></li>
+                <li><a href="#stats">Thống kê</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="products" class="featured-products">
+        <div class="container">
+            <h2>Sản phẩm nổi bật</h2>
+            <div class="grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80" alt="Tai nghe">
+                    <h3>Tai nghe Premium</h3>
+                    <p>Chất lượng âm thanh đỉnh cao.</p>
+                    <button class="btn btn--primary" style="margin-top: 15px;">Mua ngay</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80" alt="Đồng hồ">
+                    <h3>Đồng hồ thông minh</h3>
+                    <p>Theo dõi sức khỏe toàn diện.</p>
+                    <button class="btn btn--primary" style="margin-top: 15px;">Mua ngay</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80" alt="Giày">
+                    <h3>Giày thể thao</h3>
+                    <p>Êm ái, bền bỉ cho mọi bước chạy.</p>
+                    <button class="btn btn--primary" style="margin-top: 15px;">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="statistics">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h3>10K+</h3>
+                <p>Khách hàng tin dùng</p>
+            </div>
+            <div class="stat-item">
+                <h3>99%</h3>
+                <p>Đánh giá hài lòng</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Hỗ trợ tận tâm</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TechBrand. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
