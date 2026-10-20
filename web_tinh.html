@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu Sách - Lập Trình Viên Tương Lai</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0;
+        }
+        .book-cover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .book-cover:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* Features Section */
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
+        
+        /* Pricing Section */
+        .pricing-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .pricing-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .pricing-card.premium {
+            border: 2px solid #0d6efd;
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            padding: 30px;
+            height: 100%;
+        }
+        .testimonial-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #212529;
+            color: #adb5bd;
+            padding: 40px 0 20px;
+        }
+        .footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HEADER / NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-book-open text-primary me-2"></i>BookLand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#overview">Tổng quan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#author">Tác giả</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Tính năng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Giá bán</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Đánh giá</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. BOOK OVERVIEW & 3. AUTHOR (Hero Section) -->
+    <section id="overview" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center">
+                    <!-- Ảnh bìa sách -->
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80" 
+                         alt="Bìa sách Lập Trình Viên Tương Lai" 
+                         class="img-fluid book-cover" 
+                         style="max-height: 500px; width: auto;">
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-primary fw-bold text-uppercase mb-2">Sách Mới Xuất Bản</h6>
+                    <h1 class="display-4 fw-bold mb-3">Lập Trình Viên Tương Lai</h1>
+                    <p class="lead text-muted mb-4">Khám phá lộ trình trở thành một Fullstack Developer chuyên nghiệp từ con số 0. Cuốn sách gối đầu giường dành cho mọi lập trình viên.</p>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Tác giả" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                        <div>
+                            <h6 class="mb-0 fw-bold">Bùi Đức Hà</h6>
+                            <small class="text-muted">Chuyên gia Frontend & UI/UX</small>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3">
+                        <a href="#download" class="btn btn-primary btn-lg px-4"><i class="fas fa-download me-2"></i>Tải Bản Đọc Thử</a>
+                        <a href="#pricing" class="btn btn-outline-dark btn-lg px-4">Mua Sách</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FEATURES -->
+    <section id="features" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Bạn sẽ học được gì?</h2>
+                <p class="text-muted">Những kiến thức cốt lõi được đúc kết qua nhiều năm kinh nghiệm.</p>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="feature-icon"><i class="fas fa-code"></i></div>
+                    <h4 class="h5 fw-bold">Tư duy lập trình</h4>
+                    <p class="text-muted">Nắm vững logic và cách giải quyết vấn đề như một kỹ sư thực thụ.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                    <h4 class="h5 fw-bold">Công nghệ mới nhất</h4>
+                    <p class="text-muted">Thực hành trực tiếp với React, Next.js và Tailwind CSS.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h4 class="h5 fw-bold">UI/UX Thực chiến</h4>
+                    <p class="text-muted">Học cách thiết kế giao diện đẹp, tối ưu trải nghiệm người dùng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PRICES -->
+    <section id="pricing" class="bg-light py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Chọn Gói Của Bạn</h2>
+                <p class="text-muted">Sở hữu kiến thức trọn đời với mức giá cực kỳ ưu đãi.</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Gói 1 -->
+                <div class="col-md-4">
+                    <div class="card pricing-card p-4 text-center">
+                        <div class="card-body">
+                            <h5 class="text-muted fw-bold mb-3">Bản Điện Tử (Ebook)</h5>
+                            <h2 class="display-5 fw-bold mb-3">199K</h2>
+                            <ul class="list-unstyled mb-4 text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>File PDF chất lượng cao</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Cập nhật trọn đời</li>
+                                <li class="text-muted"><i class="fas fa-times text-danger me-2"></i>Không có bản cứng</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100">Mua Ngay</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gói 2 (Premium) -->
+                <div class="col-md-4">
+                    <div class="card pricing-card premium p-4 text-center bg-primary text-white">
+                        <div class="card-body">
+                            <div class="badge bg-warning text-dark mb-2">Bán Chạy Nhất</div>
+                            <h5 class="fw-bold mb-3">Combo Bản Cứng + Ebook</h5>
+                            <h2 class="display-5 fw-bold mb-3">399K</h2>
+                            <ul class="list-unstyled mb-4 text-start">
+                                <li class="mb-2"><i class="fas fa-check me-2"></i>Sách in màu bìa cứng</li>
+                                <li class="mb-2"><i class="fas fa-check me-2"></i>File PDF chất lượng cao</li>
+                                <li class="mb-2"><i class="fas fa-check me-2"></i>Tặng kèm khóa học Video</li>
+                            </ul>
+                            <button class="btn btn-light text-primary w-100 fw-bold">Mua Ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. DOWNLOAD -->
+    <section id="download" class="py-5 text-center">
+        <div class="container py-4">
+            <h2 class="fw-bold mb-3">Đọc Thử Miễn Phí</h2>
+            <p class="text-muted mb-4">Tải ngay chương 1 của cuốn sách để trải nghiệm.</p>
+            <a href="#" class="btn btn-dark btn-lg px-5"><i class="fas fa-file-pdf me-2"></i>Tải PDF (Miễn phí)</a>
+        </div>
+    </section>
+
+    <!-- 7. READER'S SAY (TESTIMONIALS) -->
+    <section id="testimonials" class="bg-light py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Độc Giả Nói Gì?</h2>
+                <p class="text-muted">Hàng ngàn lập trình viên đã thay đổi sự nghiệp nhờ cuốn sách này.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Đánh giá 1 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card text-center">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&q=80" alt="Độc giả 1">
+                        <p class="fst-italic text-muted">"Cuốn sách này đã giúp mình có được công việc Frontend đầu tiên. Lộ trình cực kỳ rõ ràng!"</p>
+                        <h6 class="fw-bold mb-0">Nguyễn Văn A</h6>
+                        <small class="text-muted">Fresher Developer</small>
+                    </div>
+                </div>
+                
+                <!-- Đánh giá 2 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card text-center">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80" alt="Độc giả 2">
+                        <p class="fst-italic text-muted">"Phần UI/UX được viết rất dễ hiểu. Mình đã áp dụng ngay vào dự án của công ty."</p>
+                        <h6 class="fw-bold mb-0">Trần Thị B</h6>
+                        <small class="text-muted">UI/UX Designer</small>
+                    </div>
+                </div>
+
+                <!-- Đánh giá 3 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card text-center">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=150&q=80" alt="Độc giả 3">
+                        <p class="fst-italic text-muted">"Tác giả viết rất tâm huyết, giải thích các khái niệm phức tạp một cách cực kỳ dễ hiểu."</p>
+                        <h6 class="fw-bold mb-0">Lê Văn C</h6>
+                        <small class="text-muted">Fullstack Developer</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="footer">
+        <div class="container text-center">
+            <h4 class="fw-bold text-white mb-3">BookLand</h4>
+            <div class="d-flex justify-content-center gap-3 mb-4">
+                <a href="#"><i class="fab fa-facebook fs-5"></i></a>
+                <a href="#"><i class="fab fa-github fs-5"></i></a>
+                <a href="#"><i class="fab fa-linkedin fs-5"></i></a>
+            </div>
+            <hr class="border-secondary">
+            <p class="mb-0 small">&copy; 2025 BookLand. Thiết kế bởi Bùi Đức Hà.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
