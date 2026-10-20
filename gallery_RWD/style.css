@@ -1,0 +1,61 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* ==========================================
+   MẶC ĐỊNH (MOBILE < 500px): 1 CỘT
+   ========================================== */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 cột */
+  gap: 15px; /* Khoảng cách giữa các ảnh */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%; /* Ảnh rộng bằng khung chứa */
+  height: 250px; /* Chiều cao cố định để các ảnh đều nhau */
+  object-fit: cover; /* Cắt ảnh cho vừa khung, không bị méo */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng zoom nhẹ khi rê chuột */
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+/* Màn hình từ 500px đến 700px: 2 CỘT */
+@media (min-width: 500px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột bằng nhau */
+  }
+}
+
+/* Màn hình từ 700px trở lên: 4 CỘT */
+@media (min-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr); /* 4 cột bằng nhau */
+  }
+}
