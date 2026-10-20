@@ -1,0 +1,86 @@
+/* ==========================================
+   1. RESET & CƠ BẢN
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* ==========================================
+   2. CẤU TRÚC LAYOUT CHÍNH (DESKTOP)
+   ========================================== */
+.container {
+  display: flex;
+  flex-direction: column; /* Xếp dọc từ trên xuống dưới */
+  height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style cho các khối Header, Nav, Footer */
+.header,
+.footer {
+  background-color: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.nav {
+  background-color: #334155;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: 500;
+}
+
+/* Khối bọc Nội dung chính và Sidebar */
+.main-container {
+  display: flex; /* Dàn ngang Content và Sidebar */
+  flex: 1; /* Chiếm toàn bộ không gian còn lại giữa Nav và Footer */
+}
+
+/* Tỷ lệ 3 : 1 */
+.content {
+  flex: 3; /* Chiếm 3 phần */
+  padding: 30px;
+  background-color: #f8fafc;
+  font-size: 1.1rem;
+}
+
+.sidebar {
+  flex: 1; /* Chiếm 1 phần */
+  background-color: #e2e8f0;
+  padding: 30px;
+  border-left: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+/* ==========================================
+   3. RESPONSIVE (MOBILE <= 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Chuyển thành xếp dọc: Content trên, Sidebar dưới */
+  }
+
+  .sidebar {
+    border-left: none;
+    border-top: 1px solid #cbd5e1; /* Đổi viền sang trên */
+  }
+
+  .container {
+    height: auto; /* Bỏ chiều cao 100vh để trang có thể cuộn trên mobile */
+    min-height: 100vh;
+  }
+}
