@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bố cục Responsive với Flexbox</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="layout-wrapper">
+      <!-- HEADER -->
+      <header class="header">
+        <h1>My Tech Blog</h1>
+      </header>
+
+      <!-- NAVIGATION -->
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Bài viết</a></li>
+          <li><a href="#">Diễn đàn</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <!-- KHỐI CHÍNH CHỨA CONTENT VÀ SIDEBAR -->
+      <div class="main-container">
+        <!-- MAIN CONTENT -->
+        <main class="content">
+          <h2>Bài viết mới nhất</h2>
+          <p>
+            Chào mừng bạn đến với blog. Đây là khu vực hiển thị nội dung chính
+            của trang web. Trên màn hình Desktop, phần này sẽ chiếm phần lớn
+            diện tích để người dùng dễ đọc.
+          </p>
+          <p>
+            Bố cục được xây dựng hoàn toàn bằng CSS Flexbox, giúp việc căn chỉnh
+            các khối trở nên cực kỳ linh hoạt. Các phần tử con tự động co giãn
+            và phân bổ không gian hợp lý.
+          </p>
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <h3>Tin nổi bật</h3>
+          <ul>
+            <li>Học Flexbox trong 10 phút</li>
+            <li>Responsive Design 2025</li>
+            <li>Tối ưu UI/UX cho Web</li>
+            <li>Top 5 Framework Frontend</li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>&copy; 2025 My Tech Blog. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
