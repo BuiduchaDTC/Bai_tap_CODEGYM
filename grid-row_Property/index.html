@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS grid-row</title>
+    <style>
+      /* Reset CSS */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+        padding: 20px;
+        color: #333;
+      }
+
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+
+      /* ==========================================
+           CSS CHUNG CHO CÁC GRID
+           ========================================== */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
+        gap: 10px;
+        background-color: #e2e8f0;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .item {
+        background-color: lightblue;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border-radius: 6px;
+        border: 1px solid #3498db;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Style riêng cho Ô 1 để dễ nhận biết */
+      .item1 {
+        background-color: #e74c3c;
+        color: white;
+        border-color: #c0392b;
+      }
+
+      /* ==========================================
+           1. grid-row: 1 / 3;
+           (Bắt đầu từ hàng 1, kết thúc ở hàng 3 -> chiếm hàng 1 và 2)
+           ========================================== */
+      .ex1 .item1 {
+        grid-row: 1 / 3;
+      }
+
+      /* ==========================================
+           2. grid-row: 2 / 4;
+           (Bắt đầu từ hàng 2, kết thúc ở hàng 4 -> chiếm hàng 2 và 3)
+           ========================================== */
+      .ex2 .item1 {
+        grid-row: 2 / 4;
+      }
+
+      /* ==========================================
+           3. grid-row: span 2;
+           (Tự động xếp theo luồng, chiếm 2 hàng liên tiếp)
+           ========================================== */
+      .ex3 .item1 {
+        grid-row: span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- VÍ DỤ 1 -->
+    <h2>1. Mặc định: grid-row: 1 / 3;</h2>
+    <p>
+      Ô 1 bắt đầu ở đường kẻ 1 và kết thúc ở đường kẻ 3 (Chiếm hàng 1 và hàng
+      2).
+    </p>
+    <div class="grid-container ex1">
+      <div class="item item1">Ô 1</div>
+      <div class="item">Ô 2</div>
+      <div class="item">Ô 3</div>
+      <div class="item">Ô 4</div>
+      <div class="item">Ô 5</div>
+      <div class="item">Ô 6</div>
+    </div>
+
+    <!-- VÍ DỤ 2 -->
+    <h2>2. Thay đổi thành: grid-row: 2 / 4;</h2>
+    <p>
+      Ô 1 bị đẩy xuống bắt đầu từ đường kẻ 2, chiếm hàng 2 và hàng 3. Hàng 1 bị
+      trống và Ô 2 sẽ nhảy lên lấp chỗ.
+    </p>
+    <div class="grid-container ex2">
+      <div class="item item1">Ô 1</div>
+      <div class="item">Ô 2</div>
+      <div class="item">Ô 3</div>
+      <div class="item">Ô 4</div>
+      <div class="item">Ô 5</div>
+      <div class="item">Ô 6</div>
+    </div>
+
+    <!-- VÍ DỤ 3 -->
+    <h2>3. Thay đổi thành: grid-row: span 2;</h2>
+    <p>
+      Ô 1 tự động chiếm 2 hàng. Vì đứng đầu tiên nên nó bắt đầu từ hàng 1 (tương
+      tự Ví dụ 1).
+    </p>
+    <div class="grid-container ex3">
+      <div class="item item1">Ô 1</div>
+      <div class="item">Ô 2</div>
+      <div class="item">Ô 3</div>
+      <div class="item">Ô 4</div>
+      <div class="item">Ô 5</div>
+      <div class="item">Ô 6</div>
+    </div>
+  </body>
+</html>

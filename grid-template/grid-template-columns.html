@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành Grid Template Columns</title>
+    <style>
+      /* Reset CSS cơ bản */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .desc {
+        margin-bottom: 15px;
+        color: #666;
+        font-style: italic;
+      }
+
+      /* ==========================================
+           VÍ DỤ 1: 3 cột bằng nhau
+           ========================================== */
+      .grid-container-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 cột bằng nhau */
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      .grid-container-1 div {
+        background-color: lightblue;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 5px;
+        border: 1px solid #3498db;
+      }
+
+      /* ==========================================
+           VÍ DỤ 2: 3 cột kích thước khác nhau
+           ========================================== */
+      .grid-container-2 {
+        display: grid;
+        grid-template-columns: 100px 200px 1fr; /* 100px, 200px, và phần còn lại */
+        gap: 10px;
+      }
+
+      .grid-container-2 div {
+        background-color: lightgreen;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 5px;
+        border: 1px solid #27ae60;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Ví dụ 1: Tạo 3 cột có kích thước bằng nhau</h2>
+    <p class="desc">
+      Sử dụng: <code>grid-template-columns: 1fr 1fr 1fr;</code>
+    </p>
+
+    <div class="grid-container-1">
+      <div>Ô 1</div>
+      <div>Ô 2</div>
+      <div>Ô 3</div>
+      <div>Ô 4</div>
+      <div>Ô 5</div>
+      <div>Ô 6</div>
+    </div>
+
+    <hr />
+
+    <h2>Ví dụ 2: Tạo các cột có kích thước khác nhau</h2>
+    <p class="desc">
+      Sử dụng: <code>grid-template-columns: 100px 200px 1fr;</code>
+    </p>
+
+    <div class="grid-container-2">
+      <div>Cột 1</div>
+      <div>Cột 2</div>
+      <div>Cột 3</div>
+      <div>Cột 1</div>
+      <div>Cột 2</div>
+      <div>Cột 3</div>
+    </div>
+  </body>
+</html>

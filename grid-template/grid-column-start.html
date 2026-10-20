@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành grid-column-start</title>
+    <style>
+      /* Reset CSS cơ bản */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+
+      p.desc {
+        margin-bottom: 15px;
+        color: #555;
+        font-size: 0.95rem;
+      }
+
+      /* Lưới chung cho các ví dụ (4 cột) */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+
+      /* Style chung cho các ô */
+      .grid-container div {
+        background-color: #ecf0f1;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 6px;
+        border: 1px solid #bdc3c7;
+        color: #333;
+      }
+
+      /* Style riêng cho Item 1 để dễ nhận biết */
+      .item1 {
+        background-color: #e74c3c !important;
+        color: white !important;
+        border-color: #c0392b !important;
+      }
+
+      /* ==========================================
+           VÍ DỤ 1: auto
+           ========================================== */
+      .ex1 .item1 {
+        grid-column-start: auto; /* Đặt mặc định, không can thiệp */
+      }
+
+      /* ==========================================
+           VÍ DỤ 2: span n
+           ========================================== */
+      .ex2 .item1 {
+        grid-column-start: span 2; /* Chiếm 2 cột */
+      }
+
+      /* ==========================================
+           VÍ DỤ 3: column-line
+           ========================================== */
+      .ex3 .item1 {
+        grid-column-start: 3; /* Bắt đầu từ đường kẻ cột số 3 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- VÍ DỤ 1 -->
+    <h2>1. Ví dụ: grid-column-start: auto;</h2>
+    <p class="desc">
+      Item 1 nằm ở vị trí mặc định (đầu tiên), không bị đẩy đi đâu cả.
+    </p>
+    <div class="grid-container ex1">
+      <div class="item1">Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+    </div>
+
+    <!-- VÍ DỤ 2 -->
+    <h2>2. Ví dụ: grid-column-start: span 2;</h2>
+    <p class="desc">Item 1 chiếm không gian của 2 cột liên tiếp.</p>
+    <div class="grid-container ex2">
+      <div class="item1">Item 1 (span 2)</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+    </div>
+
+    <!-- VÍ DỤ 3 -->
+    <h2>3. Ví dụ: grid-column-start: 3;</h2>
+    <p class="desc">
+      Item 1 bắt đầu từ đường kẻ số 3 (tức là nằm ở cột thứ 3).
+    </p>
+    <div class="grid-container ex3">
+      <div class="item1">Item 1 (Bắt đầu ở cột 3)</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+    </div>
+  </body>
+</html>

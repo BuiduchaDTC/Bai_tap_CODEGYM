@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành grid-row-gap</title>
+    <style>
+      /* Reset CSS cơ bản */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+
+      h2 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+
+      p.desc {
+        margin-bottom: 15px;
+        color: #555;
+        font-size: 0.95rem;
+      }
+
+      /* Khung chứa chung để dễ nhìn */
+      .wrapper {
+        background-color: #e2e8f0;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      /* Style chung cho các Grid */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 cột */
+        /* grid-column-gap: 10px; (Tùy chọn thêm khoảng cách cột để dễ nhìn) */
+      }
+
+      .grid-container div {
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 6px;
+        color: #333;
+      }
+
+      /* ==========================================
+           VÍ DỤ 1: length (px)
+           ========================================== */
+      .ex1 {
+        grid-row-gap: 20px;
+      }
+      .ex1 div {
+        background-color: lightblue;
+        border: 1px solid #3498db;
+      }
+
+      /* ==========================================
+           VÍ DỤ 2: percentage (%)
+           ========================================== */
+      .ex2 {
+        grid-row-gap: 5%;
+        height: 400px; /* Bắt buộc phải có height để % phát huy tác dụng */
+      }
+      .ex2 div {
+        background-color: lightgreen;
+        border: 1px solid #27ae60;
+      }
+
+      /* ==========================================
+           VÍ DỤ 3: global-value (initial)
+           ========================================== */
+      .ex3 {
+        /* Đặt về mặc định của trình duyệt (thường là 0) */
+        grid-row-gap: initial;
+      }
+      .ex3 div {
+        background-color: #f8d7da;
+        border: 1px solid #e74c3c;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- VÍ DỤ 1 -->
+    <h2>1. Ví dụ: grid-row-gap: 20px; (Length)</h2>
+    <p class="desc">
+      Khoảng cách giữa các hàng được cố định chính xác là 20px.
+    </p>
+    <div class="wrapper">
+      <div class="grid-container ex1">
+        <div>Ô 1</div>
+        <div>Ô 2</div>
+        <div>Ô 3</div>
+        <div>Ô 4</div>
+      </div>
+    </div>
+
+    <!-- VÍ DỤ 2 -->
+    <h2>2. Ví dụ: grid-row-gap: 5%; (Percentage)</h2>
+    <p class="desc">
+      Khoảng cách được tính bằng 5% chiều cao của khung chứa (400px). Khoảng
+      cách sẽ nở rộng ra nếu bạn tăng chiều cao khung.
+    </p>
+    <div class="wrapper">
+      <div class="grid-container ex2">
+        <div>Ô 1</div>
+        <div>Ô 2</div>
+        <div>Ô 3</div>
+        <div>Ô 4</div>
+      </div>
+    </div>
+
+    <!-- VÍ DỤ 3 -->
+    <h2>3. Ví dụ: grid-row-gap: initial; (Global Value)</h2>
+    <p class="desc">
+      Thuộc tính được đưa về giá trị mặc định ban đầu của trình duyệt (thường là
+      0px, nên các ô sẽ dính liền nhau).
+    </p>
+    <div class="wrapper">
+      <div class="grid-container ex3">
+        <div>Ô 1</div>
+        <div>Ô 2</div>
+        <div>Ô 3</div>
+        <div>Ô 4</div>
+      </div>
+    </div>
+  </body>
+</html>
